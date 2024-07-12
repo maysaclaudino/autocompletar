@@ -1,0 +1,56 @@
+.container {
+  padding: 1rem;
+  /* background-color: #999; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+p {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+img.tv {
+  max-width: 10rem;
+}
+
+.autocomplete-suggestions {
+  box-sizing: border-box;
+  border: 0.1rem solid #999;
+  background: #FFF;
+  cursor: default;
+  overflow: auto;
+  box-shadow: 0.1rem 0.3rem 0.3rem rgba(50, 50, 50, 0.64);
+  max-height: 0.240rem;
+}
+
+.autocomplete-suggestion { 
+  padding: 0.1rem 0.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 1.9rem;
+}
+
+.autocomplete-selected { 
+  background: #00c7b8;
+  color: #fff;
+}
+
+.autocomplete-selected strong { 
+  background: #00c7b8;
+  color: #fff;
+}
+
+.autocomplete-suggestions strong { 
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+}

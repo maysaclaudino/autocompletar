@@ -2,6 +2,8 @@
 
 ## Para executar
 
+### Com Docker
+
 É necessário ter o Docker Compose instalado. Siga as instruções em [instalação do Docker](https://docs.docker.com/desktop/install/linux-install/).
 
 O Docker Desktop ainda não é compatível com o Ubuntu 24.04 (não abre). Uma forma de contornar e fazer o Docker rodar é com os comandos:
@@ -16,6 +18,11 @@ Com o docker rodando basta entrar na pasta do Autocomplete e executar o comando
 ```bash
 docker compose up
 ```
+
+Acesse o projeto em http://localhost:3000
+
+### Sem Docker
+...
 
 # Dependências
 Docker
@@ -33,3 +40,5 @@ GraphQL
 Apollo Server
 
 GraphQL
+
+https://simplecss.org/demo

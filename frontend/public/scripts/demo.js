@@ -3,6 +3,7 @@ $(function () {
 
     $('#autocomplete-dynamic').autocomplete({
         minChars: 4,
+
         lookup: function(query, done) {
             $.ajax({
                 url: 'http://localhost:4000/graphql',
@@ -15,6 +16,8 @@ $(function () {
                         query ($prefix: String, $limit: Int) {
                             channelsWithPrefix(prefix: $prefix, limit: $limit) {
                                 CANAL
+                                TIPO_CONTEUDO_CANAL
+                                PAIS_PROGRAMADORA
                             }
                         }
                     `,
@@ -25,7 +28,15 @@ $(function () {
                 }),
                 success: function (response) {
                     let channels = response.data.channelsWithPrefix;
-                    channels = channels.map((channel) => ({ value: channel.CANAL }));
+
+                    channels = channels.map(channel => ({
+                        value: channel.CANAL,
+                        data: {
+                            TIPO_CONTEUDO_CANAL: channel.TIPO_CONTEUDO_CANAL,
+                            PAIS_PROGRAMADORA: channel.PAIS_PROGRAMADORA
+                        }
+                    }));
+
                     done({ suggestions: channels });
                 },
                 error: function (error) {
@@ -33,6 +44,13 @@ $(function () {
                     done({ suggestions: [] });
                 }
             });
+        },
+
+        onSelect: function(suggestion) {
+            $('#selction-ajax').html('<b>' + suggestion.value + '</b>' +
+                '<br> <i>País de origem:</i> ' + suggestion.data.PAIS_PROGRAMADORA +
+                                    '<br>' + suggestion.data.TIPO_CONTEUDO_CANAL
+                                );
         },
     });
 });
