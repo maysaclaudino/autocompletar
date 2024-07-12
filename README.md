@@ -1,5 +1,4 @@
-# desafio-tecnico-jusbrasil
-Desafio: Auto-completar na Busca para o processo seletivo de estágio do Jusbrasil 2024
+# Busca com Auto-completar
 
 
 # Dependências
