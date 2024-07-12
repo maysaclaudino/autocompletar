@@ -30,7 +30,8 @@ const resolvers = {
       return channels;
     },
 
-    channelsLimited(_, { limit }) {
+    channelsLimited(_, args) {
+      const limit = args.limit;
       return channels.slice(0, limit);
     },
 

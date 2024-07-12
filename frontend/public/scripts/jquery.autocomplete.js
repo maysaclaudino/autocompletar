@@ -277,11 +277,11 @@
             options.orientation = that.validateOrientation(options.orientation, 'bottom');
 
             // Adjust height, width and z-index:
-            // $(that.suggestionsContainer).css({
-            //     'max-height': options.maxHeight + 'px',
-            //     width: options.width + 'px',
-            //     'z-index': options.zIndex,
-            // });
+            $(that.suggestionsContainer).css({
+                'max-height': options.maxHeight + 'px',
+                width: options.width + 'px',
+                'z-index': options.zIndex,
+            });
 
             this.options = options;
         },

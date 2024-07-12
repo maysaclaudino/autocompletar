@@ -2,7 +2,7 @@ $(function () {
     'use strict';
 
     $('#autocomplete-dynamic').autocomplete({
-        minChars: 1,
+        minChars: 4,
         lookup: function(query, done) {
             $.ajax({
                 url: 'http://localhost:4000/graphql',
