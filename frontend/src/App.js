@@ -11,7 +11,7 @@ function App() {
           </figcaption>
         </figure>
         <div>
-          <p>Este projeto é uma implementação de um formulário de busca de <b>canais de televisão</b> com a função de autocompletar</p>
+          <p>Este projeto é uma implementação de um formulário de busca de <b>canais de televisão</b> com a função de autocompletar.</p>
           <p>Comece a digitar no campo abaixo para exibir as sugestões. Clique em um item para exibir informações sobre a emissora.</p>
           <form>
               <input
