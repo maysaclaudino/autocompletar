@@ -1,4 +1,4 @@
-import tv from './images/tvretro.png';
+import tv from './tv.png';
 
 function App() {
   return (

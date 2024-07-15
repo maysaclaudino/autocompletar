@@ -3,6 +3,7 @@ $(function () {
 
     $('#autocomplete-dynamic').autocomplete({
         minChars: 4,
+        autoSelectFirst: true,
 
         lookup: function(query, done) {
             $.ajax({
